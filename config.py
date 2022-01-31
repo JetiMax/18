@@ -1,16 +1,15 @@
 import telebot
-from telebot import TeleBot
 
-TOKEN = "5055858253:AAEaDZmZ8s0cSjA46OB0cvqOveUS3H0v2EQ"
-bot: TeleBot = telebot.TeleBot(TOKEN)
+with open('secret.txt') as file:
+    TOKEN = file.readline()
 
-# keys = {
-#     'биткоин': 'BTC',
-#     'эфириум': 'ETH',
-#     'доллар': 'USD',
-# }
+bot = telebot.TeleBot(TOKEN)
+
+
 keys = {
     'рубль': 'RUB',
     'доллар': 'USD',
     'евро': 'EUR',
-    }
+    'биткоин': 'BTC',
+    'эфириум': 'ETH',
+}
